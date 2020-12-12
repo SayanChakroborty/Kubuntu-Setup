@@ -1,6 +1,8 @@
 sudo -s << EOF
 
-apt purge thunderbird snapd -y
+apt purge -y thunderbird snapd
+
+apt auto-remove -y
 
 sed -i '/\/swapfile/d' /etc/fstab
 
@@ -8,7 +10,7 @@ echo -e "\nvm.swappiness = 0\nvm.vfs_cache_pressure = 1\nvm.dirty_background_byt
 
 sysctl -p
 
-apt install fish linux-tools-common linux-tools-generic linux-tools-$(uname -r)-generic -y
+apt install -y fish linux-tools-common linux-tools-generic linux-tools-$(uname -r)-generic
 
 echo -e "# Allow members of group sudo to execute any command\n%sudo ALL=(ALL:ALL) NOPASSWD: ALL\n" > /etc/sudoers.d/00_nopasswd
 
