@@ -34,4 +34,4 @@ sudo apt update
 
 sudo apt full-upgrade -y
 
-sudo apt install --install-recommends -y libreoffice-kde dolphin-nextcloud papirus-* qownnotes persepolis qbittorrent kodi telegram onlyoffice-desktopeditors onlyoffice-documentbuilder libgnutls30:i386 libldap-2.4-2:i386 libgpg-error0:i386 libxml2:i386 libasound2-plugins:i386 libsdl2-2.0-0:i386 libfreetype6:i386 libdbus-1-3:i386 libsqlite3-0:i386 winehq-staging lutris gamemode
+sudo apt install --install-recommends -y libreoffice-kde dolphin-nextcloud papirus-icon-theme papirus-folders qownnotes persepolis qbittorrent kodi telegram onlyoffice-desktopeditors onlyoffice-documentbuilder libgnutls30:i386 libldap-2.4-2:i386 libgpg-error0:i386 libxml2:i386 libasound2-plugins:i386 libsdl2-2.0-0:i386 libfreetype6:i386 libdbus-1-3:i386 libsqlite3-0:i386 winehq-staging lutris gamemode
