@@ -20,8 +20,10 @@ echo -e "[Bypass Polkit for Everything]\nIdentity=unix-group:sudo\nAction=*\nRes
 
 EOF
 
-echo "sudo cpupower frequency-set -g performance" > ~/.config/autostart-scripts/cpupower.sh
+echo "sudo cpupower frequency-set -g performance" > ~/.config/plasma-workspace/env/cpupower.sh
 
 echo "krunner --daemon &" > ~/.config/autostart-scripts/krunner.sh
 
 chmod a+x ~/.config/autostart-scripts/*
+
+chmod a+x ~/.config/plasma-workspace/env/*
