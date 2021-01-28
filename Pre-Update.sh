@@ -1,12 +1,12 @@
 sudo -s << EOF
 
-apt purge -y thunderbird snapd
+apt purge -y snapd
 
 apt auto-remove -y
 
 sed -i '/\/swapfile/d' /etc/fstab
 
-echo -e "\nvm.swappiness = 0\nvm.vfs_cache_pressure = 1\nvm.dirty_background_bytes = 4194304\nvm.dirty_bytes = 4194304\n" >> /etc/sysctl.d/99-sysctl.conf
+echo -e "\nvm.swappiness = 0\nvm.dirty_background_bytes = 4194304\nvm.dirty_bytes = 4194304\n" >> /etc/sysctl.d/99-sysctl.conf
 
 sysctl -p
 
@@ -22,10 +22,10 @@ EOF
 
 mkdir -p ~/.config/plasma-workspace/env
 
-echo "sudo cpupower frequency-set -g performance" > ~/.config/plasma-workspace/env/cpupower.sh
+echo "/usr/bin/sudo /usr/bin/cpupower frequency-set -g performance" > ~/.config/plasma-workspace/env/cpupower.sh
 
 chmod a+x ~/.config/plasma-workspace/env/*
 
-echo "krunner --daemon &" > ~/.config/autostart-scripts/krunner.sh
+echo "/usr/bin/sleep 10 && /usr/bin/krunner --daemon" > ~/.config/autostart-scripts/krunner.sh
 
 chmod a+x ~/.config/autostart-scripts/*
