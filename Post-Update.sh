@@ -1,29 +1,33 @@
-sudo add-apt-repository -y ppa:kubuntu-ppa/backports
+sudo -s << EOF
 
-sudo add-apt-repository -y ppa:libreoffice/ppa
+add-apt-repository -y ppa:kubuntu-ppa/backports
 
-sudo add-apt-repository -y ppa:nextcloud-devs/client
+add-apt-repository -y ppa:libreoffice/ppa
 
-sudo add-apt-repository -y ppa:papirus/papirus
+add-apt-repository -y ppa:nextcloud-devs/client
 
-sudo add-apt-repository -y ppa:pbek/qownnotes
+add-apt-repository -y ppa:papirus/papirus
 
-sudo add-apt-repository -y ppa:persepolis/ppa
+add-apt-repository -y ppa:pbek/qownnotes
 
-sudo add-apt-repository -y ppa:qbittorrent-team/qbittorrent-stable
+add-apt-repository -y ppa:persepolis/ppa
 
-sudo add-apt-repository -y ppa:team-xbmc/ppa
+add-apt-repository -y ppa:qbittorrent-team/qbittorrent-stable
 
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys CB2DE8E5
+add-apt-repository -y ppa:team-xbmc/ppa
 
-sudo add-apt-repository -y 'deb https://download.onlyoffice.com/repo/debian squeeze main'
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys CB2DE8E5
 
-sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+add-apt-repository -y 'deb https://download.onlyoffice.com/repo/debian squeeze main'
 
-sudo chmod a+rx /usr/local/bin/youtube-dl
+apt update
 
-sudo apt update
+apt full-upgrade -y
 
-sudo apt full-upgrade -y
+apt install --install-recommends -y kubuntu-restricted-addons kubuntu-restricted-extras libreoffice-kde dolphin-nextcloud papirus-icon-theme papirus-folders qownnotes persepolis qbittorrent kodi onlyoffice-desktopeditors onlyoffice-documentbuilder
 
-sudo apt install --install-recommends -y libreoffice-kde dolphin-nextcloud papirus-icon-theme papirus-folders qownnotes persepolis qbittorrent kodi onlyoffice-desktopeditors onlyoffice-documentbuilder
+wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+
+chmod a+rx /usr/local/bin/youtube-dl
+
+EOF
