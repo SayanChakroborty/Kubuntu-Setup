@@ -18,7 +18,7 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys CB2DE8E5
 
 sudo add-apt-repository -y 'deb https://download.onlyoffice.com/repo/debian squeeze main'
 
-sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
 
 sudo chmod a+rx /usr/local/bin/youtube-dl
 
