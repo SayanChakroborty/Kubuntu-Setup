@@ -24,10 +24,8 @@ apt update
 
 apt full-upgrade -y
 
-apt install --install-recommends -y kubuntu-restricted-addons kubuntu-restricted-extras libreoffice-kde dolphin-nextcloud papirus-icon-theme papirus-folders qownnotes persepolis qbittorrent kodi onlyoffice-desktopeditors onlyoffice-documentbuilder
+apt install --install-recommends -y kubuntu-restricted-addons kubuntu-restricted-extras libreoffice-kde dolphin-nextcloud papirus-icon-theme papirus-folders qownnotes persepolis qbittorrent kodi onlyoffice-desktopeditors onlyoffice-documentbuilder python3-pip
 
-wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
-
-chmod a+rx /usr/local/bin/youtube-dl
+pip3 install --upgrade youtube_dl
 
 EOF
