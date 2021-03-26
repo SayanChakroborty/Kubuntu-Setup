@@ -6,7 +6,11 @@ apt auto-remove -y
 
 sed -i '/\/swapfile/d' /etc/fstab
 
-echo -e "\nvm.swappiness = 0\nvm.dirty_background_bytes = 4194304\nvm.dirty_bytes = 4194304\n" >> /etc/sysctl.d/99-sysctl.conf
+swapoff --all
+
+rm /swapfile
+
+echo -e "\nvm.swappiness = 0\nvm.vfs_cache_pressure=1\nvm.dirty_background_bytes = 4194304\nvm.dirty_bytes = 4194304\n" >> /etc/sysctl.d/99-sysctl.conf
 
 sysctl -p
 
