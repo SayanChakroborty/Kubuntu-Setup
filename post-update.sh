@@ -8,11 +8,7 @@ add-apt-repository -y ppa:nextcloud-devs/client
 
 add-apt-repository -y ppa:papirus/papirus
 
-add-apt-repository -y ppa:pbek/qownnotes
-
 add-apt-repository -y ppa:persepolis/ppa
-
-add-apt-repository -y ppa:qbittorrent-team/qbittorrent-stable
 
 add-apt-repository -y ppa:team-xbmc/ppa
 
@@ -24,7 +20,7 @@ apt update
 
 apt full-upgrade -y
 
-apt install --install-recommends -y kubuntu-restricted-addons kubuntu-restricted-extras libreoffice-kde dolphin-nextcloud papirus-icon-theme papirus-folders qownnotes persepolis qbittorrent kodi onlyoffice-desktopeditors onlyoffice-documentbuilder python3-pip
+apt install --install-recommends -y kubuntu-restricted-addons kubuntu-restricted-extras libreoffice libreoffice-kde dolphin-nextcloud papirus-icon-theme papirus-folders persepolis kodi onlyoffice-desktopeditors onlyoffice-documentbuilder python3-pip
 
 pip3 install --upgrade youtube_dl
 
