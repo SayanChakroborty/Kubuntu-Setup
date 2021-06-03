@@ -20,4 +20,6 @@ chmod 0440 /etc/sudoers.d/00_nopasswd
 
 echo -e "[Bypass Polkit for Everything]\nIdentity=unix-group:sudo\nAction=*\nResultActive=yes\n" > /var/lib/polkit-1/localauthority/50-local.d/bypass-polkit.pkla
 
+echo -e "\nGTK_USE_PORTAL=1\n" >> /etc/environment
+
 EOF
