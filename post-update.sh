@@ -8,8 +8,6 @@ add-apt-repository -y ppa:nextcloud-devs/client
 
 add-apt-repository -y ppa:papirus/papirus
 
-add-apt-repository -y ppa:persepolis/ppa
-
 add-apt-repository -y ppa:team-xbmc/ppa
 
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys CB2DE8E5
@@ -20,8 +18,6 @@ apt update
 
 apt full-upgrade -y
 
-apt install --install-recommends -y kubuntu-restricted-addons kubuntu-restricted-extras libreoffice libreoffice-kde dolphin-nextcloud papirus-icon-theme papirus-folders persepolis kodi onlyoffice-desktopeditors onlyoffice-documentbuilder python3-pip
-
-pip3 install --upgrade youtube_dl
+apt install --install-recommends -y libreoffice libreoffice-kde dolphin-nextcloud papirus-icon-theme papirus-folders kodi onlyoffice-desktopeditors onlyoffice-documentbuilder
 
 EOF
