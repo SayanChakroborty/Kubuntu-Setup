@@ -1,6 +1,6 @@
 sudo -s << EOF
 
-apt purge -y snapd apport thunderbird
+apt purge -y snapd apport thunderbird whoopsie*
 
 apt auto-remove -y
 
